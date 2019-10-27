@@ -1,0 +1,42 @@
+body {
+  min-height: 900px;
+}
+#formContainer {
+  width: 256px;
+  border: 2px solid gray;
+  position: relative;
+  left: 128px;
+  top: 128px;
+}
+h1 {
+  text-align: center;
+}
+form {
+  text-align: center;
+}
+img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: -2px;
+}
+#btns {
+  margin-top: 12px;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  padding-inline-start: 32px;
+}
+#details>li {
+  text-decoration: underline;
+  color: black;
+}
+li {
+  margin-top: 4px;
+  color: red;
+}
+label {
+  color: red;
+  line-height: 21px;
+}

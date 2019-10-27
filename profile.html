@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+吴惠杰 15331313
+-->
+
+<head>
+  <meta charset="utf-8" />
+  <title>详情</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+  <link href='./static/css/signUp.css' type='text/css' rel='stylesheet' />
+  {{ scriptInHead }}
+
+  <!-- <link href="./static/css/newMaze.css" type="text/css" rel="stylesheet" />
+  <link rel="icon" sizes="32x32" href="./static/img/favicon_maze2.ico">
+  <script src="./static/js/newMaze.js"></script>
+  <script src="./static/js/lodash.js"></script>
+  <script src="./static/js/jquery.js"></script> -->
+</head>
+
+<body>
+  <div id='formContainer'>
+    <h1>用户详情</h1>
+    <ul id='details'>
+      <li><img src='./static/img/username.png' />{{ username }}</li>
+      <li><img src='./static/img/studentID.png' />{{ studentID }}</li>
+      <li><img src='./static/img/phone.png' />{{ phone }}</li>
+      <li><img src='./static/img/email.png' />{{ email }}</li>
+    </ul>
+  </div>
+</body>
+
+</html>

@@ -7,29 +7,46 @@
 <head>
   <meta charset="utf-8" />
   <title>注册</title>
-  <!-- <link href="./static/css/newMaze.css" type="text/css" rel="stylesheet" />
-  <link rel="icon" sizes="32x32" href="./static/img/favicon_maze2.ico">
-  <script src="./static/js/newMaze.js"></script>
-  <script src="./static/js/lodash.js"></script>
-  <script src="./static/js/jquery.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+  <script>
+    $(() => { $('li').hide() });
+  </script>
+  {{ scriptInHead }}
+  <link href='./static/css/signUp.css' type='text/css' rel='stylesheet' />
+  <link rel="icon" sizes="32x32" href="./static/img/username.png">
+  <script src="./static/js/jquery.js"></script>
 </head>
 
 <body>
-  <form id='signUpForm' action='http://localhost:9708/signUp' method='post'>
+  <div id='formContainer'>
     <h1>用户注册</h1>
-    <!-- <ul>
-    <li>用户名：<input type='text' name='username' placeholder='请输入用户名' /></li>
-    <li>学号：<input type='text' name='studentID' placeholder='请输入学号' /></li>
-    <li>电话：<input type='text' name='phone' placeholder='请输入电话' /></li>
-    <li>邮箱：<input type='email' name='email' placeholder='请输入邮箱' /></li>
-  </ul> -->
-    <label>用户名：<input type='text' name='username' placeholder='请输入用户名' /></label><br />
-    <label>学号：<input type='text' name='studentID' placeholder='请输入学号' /></label><br />
-    <label>电话：<input type='text' name='phone' placeholder='请输入电话' /></label><br />
-    <label>邮箱：<input type='email' name='email' placeholder='请输入邮箱' /></label><br />
-    <input type='reset' value='重置' />
-    <input type='submit' value='提交' />
-  </form>
+
+    <form id='signUpForm' action='http://localhost:9708/signUp' method='post'>
+
+      <label title='要求格式为6-18位英文字母、数字或下划线，必须以英文字母开头'><img src='./static/img/username.png' /><input id='username'
+          type='text' name='username' placeholder='请输入用户名' /></label><br />
+      <label title='要求格式为8位数字且不能以0开头'><img src='./static/img/studentID.png' /><input id='studentID' type='text'
+          name='studentID' placeholder='请输入学号' /></label><br />
+      <label title='要求格式为11为数字且不能以0开头'><img src='./static/img/phone.png' /><input id='phone' type='text' name='phone'
+          placeholder='请输入电话' /></label><br />
+      <label title='具体格式要求见课件 -。-'><img src='./static/img/email.png' /><input id='email' type='email' name='email'
+          placeholder='请输入邮箱' /></label><br />
+      <div id='btns'>
+        <input type='reset' value='重置' />
+        <input type='submit' value='提交' />
+      </div>
+    </form>
+    <ul>
+      <li id='dusername'>用户名重复</li>
+      <li id='wusername' title='要求格式为6-18位英文字母、数字或下划线，必须以英文字母开头'>用户名格式错误</li>
+      <li id='ddtudentID'>学号重复</li>
+      <li id='wdtudentID' title='要求格式为8位数字且不能以0开头'>学号格式错误</li>
+      <li id='dphone'>电话重复</li>
+      <li id='wphone' title='要求格式为11为数字且不能以0开头'>电话格式错误</li>
+      <li id='demail'>邮箱重复</li>
+      <li id='wemail' title='具体格式要求见课件 -。-'>邮箱格式错误</li>
+    </ul>
+  </div>
 </body>
 
 </html>
